@@ -55,6 +55,10 @@ body {
   padding-right: 2em;
 }
 
+.task-containers .individual-tasks .left-col .CB-title {
+  cursor: pointer;
+}
+
 .task-containers .individual-tasks .left-col .CB-title > * {
   display: inline;
 }

@@ -1,3 +1,4 @@
+<!-- This is the page that the user sees after clicking the edit button in the main page. I made sure that the information is pre-filled so the user can quickly make changes to the task and save them in the database. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit To Do</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 
 <?php 
-    include_once 'includes/database.php';
+    include_once '../includes/database.php';
     $id = $_REQUEST['id'];
 
     $sql = "SELECT * FROM tasks WHERE id = $id;";
@@ -29,7 +30,7 @@
     <section class="form-AN">
         <h2>Edit</h2>
         <?php
-        echo "<form action='includes/updateTask.php?id=" . $id .  "' method = 'post'>"  ?>
+        echo "<form action='../includes/updateTask.php?id=" . $id .  "' method = 'post'>"  ?>
             <label for="Task-title">Title:</label>
             <input type="text" class="input-box title-box" name = "taskTitle" required value = '<?php echo $titlePH ?>'>
 
@@ -38,7 +39,7 @@
             
             <div class="btn-box">
                 <a href="index.php" class="go-back-btn">Go back</a> 
-                <?php echo "<a href='includes/deleteTask.php?id=" . $id . "' class='delete-btn' name = 'delete'>Delete</a>"; ?>             
+                <?php echo "<a href='../includes/deleteTask.php?id=" . $id . "' class='delete-btn' name = 'delete'>Delete</a>"; ?>             
                 <input type="submit" value="Save changes" class="submit-btn" name = "submit">
             </div>
         </form>

@@ -1,3 +1,5 @@
+//For this project I used SCSS because I wanted a little more control over the project and I am still in the process of learning Boostrap.
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
@@ -58,6 +60,11 @@ body
         {
             padding-right: 2em;
             
+            .CB-title
+            {
+                cursor: pointer;
+            }
+
             .CB-title>*
             {
                 display: inline;

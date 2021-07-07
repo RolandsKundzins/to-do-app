@@ -1,8 +1,7 @@
 <?php
-
+    //This file is responsible for deleting a task and saving changes in the database. This file is called when the user clicks the delete button which is located in the editing window.
     include_once 'database.php';
 
-    //if(isset($_POST['delete']))
     
     $id = $_REQUEST['id'];
 
@@ -10,7 +9,7 @@
     mysqli_query($conn, $sql);
 
     
-    header("Location: ../index.php?taskdeleted&taskTitle=".$taskTitle);
+    header("Location: ../public/index.php?taskdeleted&taskTitle=".$taskTitle);
     exit();
 
 ?>

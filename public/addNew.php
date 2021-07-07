@@ -1,3 +1,4 @@
+<!-- This page is used to write and later add new tasks to the database. You have two input fields: one for title and one for description. You also have two buttons that both will return you to the main page but "Go back" button will not save the changes. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New To Do</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="navbar">
@@ -14,12 +15,12 @@
     
     <section class="form-AN">
         <h2>Add new</h2>
-        <form action="includes/insertTask.php" method = "post">
+        <form action="../includes/insertTask.php" method = "post">
             <label for="Task-title">Title:</label>
             <input type="text" class="input-box title-box" name = "taskTitle" required>
 
             <label for="Task-description">Description:</label>
-            <textarea name="taskDescription" id="description" cols="30" rows="10" class="input-box description-box"></textarea>
+            <textarea id="description" cols="30" rows="10" class="input-box description-box" name="taskDescription"></textarea>
             
             <div class="btn-box">
                 <a href="index.php" class="go-back-btn">Go back</a>               
