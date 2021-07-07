@@ -7,7 +7,7 @@
     $sql = "SELECT completion FROM tasks WHERE id = $id;";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
-    //when the checkbox is clicked it will change the status of the completion. So if status is 1 it will change it to 0 and if it is set to 0 it will change to 1.
+    //when the checkbox is clicked it will change the status of the completion. If status set to 1 than change it to 0 and vice versa.
     if($row['completion'] == 0){  
         $completionStatus = 1;
     } else{
